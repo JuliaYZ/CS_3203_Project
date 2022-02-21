@@ -8,19 +8,31 @@
 <body>
     <div class ="form-container">
     <u1 class="list">
-       <input type="text1" name ="Personal" placeholder="Personal:" >
+       <li0><input type="text" name ="Personal" placeholder="Personal:" ></li0>
+       <li1>
        <input type="text" name ="Points" placeholder="points:" >
        <input type="button"  value="Friends">
        <input type="button" value="Music">
-       <input type="button" value="Pet">
+       </li1>
+       <li2><input type="button" value="Pet">
        <input type="button" value="calendar">
        <input type="button" value="Reminder">
        <input type="button" value="Notes">
        <input type="button" value="Checklist">
        <input type="button" value="Calculator">
        <input type="button" value="Setting">
-        
-        
+        </li2>
+        <li3>
+            <canvas id="myCanvas" width="300" height="250" style="border:1px solid #000000;"></canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "15px Arial";
+                ctx.fillText("Study Time:", 0, 20);
+                ctx.fillText("Remaining Time:", 0, 50);
+                
+            </script>
+        </li3>
         
     </u1>    
 </div>      
