@@ -9,15 +9,51 @@ body{
     padding:20px 30px;
     background-color:white;
     border-radius:15px;
-    box-shadow: 0 0 10px 0 #000;
+    box-shadow: 1 0 10px 0 #000;
     margin:auto;
 }
-u1.list input[type = "text1" ]{
-    width: 50px;
-    height:50px;
+
+u1.list li0 input{
+    width: 90px;
+    height:90px;
+    border-color:black;
+    border-width: 2px;
+    border-radius:15px;
+    margin-right: 40px;
 }
-u1.list input[type="button"]{
-    width: 50px;
-    height:50px;
+u1.list li1 input[type = "text"]{
+    width: 190px;
+    height:30px;
+    border-color:black;
+    border-width: 2px;
+    border-radius:2px;
+     margin-right: 40px;
+}
+
+u1.list li1 input[type = "button"]{
+    width: 88px;
+    height:60px;  
+    box-shadow: 1 0 10px 0 #000;
+    margin-right: 10px;
+    border-radius:15px;
+    border-width: 2px;
+    color:cornflowerblue;
+    
+}
+u1.list li2 input{
+    width: 88px;
+    height:60px;
     display:list-item;
+    margin-left: 900px;
+    box-shadow: 1 0 10px 0 #000;
+    margin-bottom: 10px;
+    border-radius:15px;
+    border-width: 2px;
+    color:cornflowerblue;
+}
+u1.list li3 canvas{
+    margin-top:-500px;
+    margin-left:20px;
+    border-radius:15px;
+    box-shadow: 0 0 10px 0 #000;
 }
