@@ -1,0 +1,116 @@
+*{
+    margin:0; 
+    padding:0;
+}
+
+
+
+body{
+    background-image: url(/imags/classroom1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.form-container{
+    width: auto;
+    height: 700px;
+    box-shadow: 1 0 10px 0 #000;
+    margin:auto;
+}
+
+#bb{
+    width: 450px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 250px;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+#bb-img{
+    float: left;
+}
+
+#bb-img img{
+    background-size: 100%;
+    width: 100%;
+}
+
+#text{
+    padding: 100px 0px;
+    margin-left: 70px;
+    display: block;
+    color: white;
+    font-family: arial, helvetica, sans-serif;
+    position: absolute;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+#personal{
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#personal button{
+    margin: 0px 10px;
+    background-color: transparent;
+}
+
+#points{
+    float: left;
+    border-color:black;
+    border-width: 2px;
+    border-radius:2px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+#list1{
+    float: left;  
+    margin-left: 1000px;
+    margin-top: -40px;
+}
+
+#list1 button{
+    margin: 10px 0px;
+    background-color: transparent;
+}
+
+#music{
+    margin-left: 50px;
+}
+
+#list2{
+    width: 88px;
+    height: 60px;
+    float: right;
+    display:block;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+#list2 button{
+    margin: 10px 0px;
+    background-color: transparent;
+}
+
+.btn {
+    padding: 0px 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 3px 3px 3px darkgray inset;
+}
+
