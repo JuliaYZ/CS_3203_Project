@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>contain element</title>
-    <link rel="stylesheet" href ="2.css">
+    <link rel="stylesheet" href ="CSS/main.css">
 </head>
 <body>
     <div class ="form-container">
