@@ -1,45 +1,76 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     max-height: 100vh;
     background-image: url(/imags/loginbg2.jpg);
     background-size: cover;
-    padding-top:30vh;
+    padding-top: 30vh;
 }
 
-
-
-.form-container{
+.container {
     width: 250px;
     height: auto;
-    padding:20px 30px;
-    background-color:white;
-    border-radius:15px;
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 15px;
     box-shadow: 0 0 10px 0 #000;
-    margin:auto;
+    margin: auto;
 }
 
-u1.list{
-    list-style-type: none;
-    text-align: center;
-}
-
-u1.list li{
-    width:250px; 
+.input-field {
+    width: 250px;
     margin-bottom: 15px;
 }
 
-u1.list li input{
-    width:250px;
-    padding:8px 0px;
-    border:none;
-    
+.input-field input {
+    height: 25px;
+    width: 250px;
+    padding: 9px 0px;
+    border: 1px solid silver;
+    outline: none;
+    font-size: 15px;
 }
 
-u1.list li input[type="button"]{
-    width:auto;
-    border:1px solid black;
+input::placeholder {
+    color: white;
+}
+
+input:focus {
+    border: 1px solid #1DA1F2;
+}
+
+input:focus::placeholder {
+    color: grey;
+    transition: .4s;
+}
+
+input:focus ~ label {
+    margin-left: 10px;
+    transform: translateY(-55px);
+    background: white;
+    font-size: 12px;
+    color: #1DA1F2;
+}
+
+.input-field label {
+    margin-left: 3px;
+    position: absolute;
+    transform: translateY(-34px);
+    pointer-events: none;
+    color: grey;
+    font-size: 16px;
+    transition: .4s;
+}
+
+
+.button button {
+    display: list-item;
+    height: 30px;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-decoration: none;
 }
