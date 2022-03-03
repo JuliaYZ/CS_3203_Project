@@ -26,7 +26,7 @@ You may join any server for the virtual study rooms that you find online, but th
 
 ### Executing program
 
-* 
+* Show the directory of the file
 ```
 pwd
 ```
