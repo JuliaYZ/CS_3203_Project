@@ -8,23 +8,23 @@
 
 <body>
     <div class="container">
-        <form>
+        <form method="post" action ='/login'> 
             <div class="input-field">
-                <input type="email" name="Email" placeholder="Please enter a valid email">
+                <input type="email"  name="email" placeholder="Please enter a valid email" required>
                 <label>Email</label>
             </div>
             <div class="input-field">
-                <input type="password" name="Password" placeholder="Please enter your password">
+                <input type="password" name="password" placeholder="Please enter your password" required>
                 <label>Password</label>
             </div>
             <div class="button">
                 <button>
-                    <a href="main.html" style="text-decoration:none;">
+                    
                         Let's Go!
-                    </a>
+                
                 </button>
                 <button>
-                    <a href="register.html" style="text-decoration:none;">
+                     <a href="{{url_for('register')}}" style="text-decoration:none;">
                         Don't have an account?
                     </a>
                 </button>
