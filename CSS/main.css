@@ -27,6 +27,7 @@ body {
     top: 250px;
     left: 30%;
     transform: translateX(-50%);
+    z-index: -1;
 }
 
 #bb-img {

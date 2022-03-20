@@ -7,6 +7,11 @@ function myCalculator() {
     }
 }
 
+function xcal() {
+    var x = document.getElementById("calculator");
+    x.style.display === "none";
+}
+
 class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement
