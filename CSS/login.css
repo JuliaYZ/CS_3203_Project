@@ -4,9 +4,10 @@
 }
 
 body {
-    max-height: 100vh;
     background-image: url(/imags/loginbg2.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    
     padding-top: 30vh;
 }
 
@@ -17,6 +18,7 @@ body {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 0 10px 0 #000;
+
     margin: auto;
 }
 
@@ -48,7 +50,7 @@ input:focus::placeholder {
 }
 
 input:focus ~ label,
-input:valid ~ label{
+input:valid ~ label {
     margin-left: 10px;
     transform: translateY(-55px);
     background: white;
