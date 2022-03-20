@@ -4,8 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>contain element</title>
+
     <link rel="stylesheet" href="../CSS/main.css">
     <script src="https://kit.fontawesome.com/3daf42b482.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../CSS/calendar.css">
+    <script src="../JavaScript/calendar.js" defer></script>
+
+    <link rel="stylesheet" href="../CSS/stickNotes.css">
+    <script src="../JavaScript/StickNotes/stickNotes.js" type="module"></script>
+    <cite><a href="https://github.com/dcode-youtube/notes-app-javascript-localstorage"></a></cite>
+
+    <link rel="stylesheet" href="../CSS/calculator.css">
+    <script src="../JavaScript/calculator.js" defer></script>
+    <cite><a href="https://github.com/WebDevSimplified/Vanilla-JavaScript-Calculator"></a></cite>
 </head>
 
 <body>
@@ -32,13 +44,74 @@
         </div>
 
         <div id="list2">
-            <button type="button">
+            <button type="button" onclick="myCalendar()">
                 <i class="fa-solid fa-calendar fa-4x btn"></i>
             </button>
 
-            <button type="button">
+            <div id="calendar">
+                <!--
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showTitle=1&showTz=1&src=MnVtcGUzbzExanRuMnVrZ2YzM2cwZGV2ZThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=OHRjbTNzY2J1YW5hYmo5NjZzczRuMWlhZW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=c29vbmJ0cWtmbnFldjRtNjFudW1kY2llZzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23E4C441&color=%23616161&color=%23F09300" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+-->
+
+
+                <!--
+                <div class="month">
+                  <ul>
+                    <li class="prev">&#10094;</li>
+                    <li class="next">&#10095;</li>
+                    <li>August<br><span style="font-size:18px">2021</span></li>
+                  </ul>
+                </div>
+
+                <ul class="weekdays">
+                  <li>Mo</li>
+                  <li>Tu</li>
+                  <li>We</li>
+                  <li>Th</li>
+                  <li>Fr</li>
+                  <li>Sa</li>
+                  <li>Su</li>
+                </ul>
+
+                <ul class="days">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li><span class="active">10</span></li>
+                  <li>11</li>
+                  ...etc
+                </ul>
+-->
+            </div>
+
+            <button type="button" onclick="myStickNotes()">
                 <i class="fa-solid fa-note-sticky fa-4x btn"></i>
             </button>
+
+            <div id="stickNotes">
+                <div class="notes" id="app">
+                    <div class="notes__sidebar">
+                        <button class="notes__add" type="button">Add Note</button>
+                        <div class="notes__list">
+                            <div class="notes__list-item notes__list-item--selected">
+                                <div class="notes__small-title">Lecture Notes</div>
+                                <div class="notes__small-body">I learnt nothing today.</div>
+                                <div class="notes__small-updated">Thursday 3:30pm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notes__preview">
+                        <input class="notes__title" type="text" placeholder="Enter a title...">
+                        <textarea class="notes__body">I am the notes body...</textarea>
+                    </div>
+                </div>
+            </div>
 
             <button type="button">
                 <i class="fa-solid fa-pen-to-square fa-4x btn"></i>
@@ -48,9 +121,38 @@
                 <i class="fa-solid fa-list-check fa-4x btn"></i>
             </button>
 
-            <button type="button">
+            <button type="button" onclick="myCalculator()">
                 <i class="fa-solid fa-calculator fa-4x btn"></i>
             </button>
+
+            <div id="calculator">
+                <div class="calculator-grid">
+                    <div class="output">
+                        <div data-previous-operand class="previous-operand"></div>
+                        <div data-current-operand class="current-operand"></div>
+                    </div>
+                    <button data-all-clear class="span-two">AC</button>
+                    <button data-delete>DEL</button>
+                    <button data-operation>÷</button>
+                    <button data-number>1</button>
+                    <button data-number>2</button>
+                    <button data-number>3</button>
+                    <button data-operation>*</button>
+                    <button data-number>4</button>
+                    <button data-number>5</button>
+                    <button data-number>6</button>
+                    <button data-operation>+</button>
+                    <button data-number>7</button>
+                    <button data-number>8</button>
+                    <button data-number>9</button>
+                    <button data-operation>-</button>
+                    <button data-number>.</button>
+                    <button data-number>0</button>
+                    <button data-equals class="span-two">=</button>
+                </div>
+            </div>
+
+
 
             <button type="button">
                 <i class="fa-solid fa-gear fa-4x btn"></i>
