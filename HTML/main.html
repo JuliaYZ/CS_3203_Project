@@ -11,13 +11,18 @@
     <link rel="stylesheet" href="../CSS/calendar.css">
     <script src="../JavaScript/calendar.js" defer></script>
 
-    <link rel="stylesheet" href="../CSS/stickNotes.css">
-    <script src="../JavaScript/StickNotes/stickNotes.js" type="module"></script>
-    <cite><a href="https://github.com/dcode-youtube/notes-app-javascript-localstorage"></a></cite>
-
     <link rel="stylesheet" href="../CSS/calculator.css">
     <script src="../JavaScript/calculator.js" defer></script>
     <cite><a href="https://github.com/WebDevSimplified/Vanilla-JavaScript-Calculator"></a></cite>
+
+    <link rel="stylesheet" href="../CSS/stickNotes.css">
+    <script src="../JavaScript/StickNotes/stickNotes.js" type="module" defer></script>
+    <cite><a href="https://github.com/dcode-youtube/notes-app-javascript-localstorage"></a></cite>
+
+    <link rel="stylesheet" href="../CSS/checkList.css">
+    <script src="../JavaScript/checkList.js" defer></script>
+
+
 </head>
 
 <body>
@@ -41,9 +46,7 @@
             <button type="button">
                 <i class="fa-solid fa-music fa-4x btn"></i>
             </button>
-        </div>
 
-        <div id="list2">
             <button type="button" onclick="myCalendar()">
                 <i class="fa-solid fa-calendar fa-4x btn"></i>
             </button>
@@ -89,43 +92,15 @@
                 </ul>
 -->
             </div>
+        </div>
 
-            <button type="button" onclick="myStickNotes()">
-                <i class="fa-solid fa-note-sticky fa-4x btn"></i>
-            </button>
-
-            <div id="stickNotes">
-                <div class="notes" id="app">
-                    <div class="notes__sidebar">
-                        <button class="notes__add" type="button">Add Note</button>
-                        <div class="notes__list">
-                            <div class="notes__list-item notes__list-item--selected">
-                                <div class="notes__small-title">Lecture Notes</div>
-                                <div class="notes__small-body">I learnt nothing today.</div>
-                                <div class="notes__small-updated">Thursday 3:30pm</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="notes__preview">
-                        <input class="notes__title" type="text" placeholder="Enter a title...">
-                        <textarea class="notes__body">I am the notes body...</textarea>
-                    </div>
-                </div>
-            </div>
-
-            <button type="button">
-                <i class="fa-solid fa-pen-to-square fa-4x btn"></i>
-            </button>
-
-            <button type="button">
-                <i class="fa-solid fa-list-check fa-4x btn"></i>
-            </button>
-
+        <div id="list2">
             <button type="button" onclick="myCalculator()">
                 <i class="fa-solid fa-calculator fa-4x btn"></i>
             </button>
 
             <div id="calculator">
+                <i class="fa-solid fa-xmark fa-2x" id="xcal" onclick="xcal()"></i>
                 <div class="calculator-grid">
                     <div class="output">
                         <div data-previous-operand class="previous-operand"></div>
@@ -152,11 +127,43 @@
                 </div>
             </div>
 
-
-
-            <button type="button">
-                <i class="fa-solid fa-gear fa-4x btn"></i>
+            <button type="button" onclick="myStickNotes()">
+                <i class="fa-solid fa-note-sticky fa-4x btn"></i>
             </button>
+
+            <div id="stickNotes">
+                <div class="notes" id="app">
+                    <div class="notes__sidebar">
+                        <button class="notes__add" type="button">Add Note</button>
+                        <div class="notes__list">
+                            <div class="notes__list-item notes__list-item--selected">
+                                <div class="notes__small-title">Lecture Notes</div>
+                                <div class="notes__small-body">I learnt nothing today.</div>
+                                <div class="notes__small-updated">Thursday 3:30pm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notes__preview">
+                        <input class="notes__title" type="text" placeholder="Enter a title...">
+                        <textarea class="notes__body">I am the notes body...</textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="button" onclick="myCheckList()">
+                <i class="fa-solid fa-list-check fa-4x btn"></i>
+            </button>
+
+            <div id="checkList">
+                <i class="fa-solid fa-xmark fa-2x" id="xcl" onclick="xcl()"></i>
+                <div id="list">
+                    <input type="checkbox" id="cl1" name="cl1" value="cl1">
+                    <label for="cl1"> I have a bike</label><br>
+                    <input type="checkbox" id="cl2" name="cl2" value="cl2">
+                    <label for="cl2"> I have a car</label><br>
+                    <input type="checkbox" id="cl3" name="cl3" value="cl3">
+                    <label for="cl3"> I have a boat</label><br>
+                </div>
+            </div>
 
         </div>
 

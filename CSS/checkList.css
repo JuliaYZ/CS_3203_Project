@@ -1,0 +1,26 @@
+#checkList {
+    width: 400px;
+    height: 600px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    transform: translateX(-150%);
+    background-color: white;
+}
+
+#list {
+    margin: 80px 0 0 30px;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+#xcl {
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.xcl:hover {
+    box-shadow: 3px 3px 3px darkgray inset;
+}
