@@ -1,9 +1,11 @@
+/*<cite><a href="https://github.com/WebDevSimplified/Vanilla-JavaScript-Calculator"></a></cite>*/
+
 #calculator {
     display: none;
     position: absolute;
     margin: -230px 0 0 -400px;
     transform: translateX(-50%);
-    background-color: white
+    background-color: white;
 }
 
 calculator,

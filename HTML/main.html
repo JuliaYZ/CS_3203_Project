@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>contain element</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="../CSS/main.css">
+    <script src="../JavaScript/main.js" defer></script>
     <script src="https://kit.fontawesome.com/3daf42b482.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../CSS/calendar.css">
@@ -38,57 +39,33 @@
         </div>
 
         <div id="list1">
-            <button type="button">
+
+            <button type="button" onclick="comingSoon()">
                 <i class="fa-solid fa-paw fa-4x btn"></i>
             </button>
+
+            <div id="CS">
+                <i class="fa-solid fa-xmark" id="xCS" onclick="xCS()"></i>
+                <p>Coming</p>
+                <p>Soon...</p>
+            </div>
+
             <button type="button">
                 <i class="fa-solid fa-music fa-4x btn"></i>
             </button>
+
+            <!--
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/299183494&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/dondersteen-606958087" title="dondersteen" target="_blank" style="color: #cccccc; text-decoration: none;">dondersteen</a> · <a href="https://soundcloud.com/dondersteen-606958087/zayn-malik-taylor-swift-i-dont-wanna-live-forever" title="Taylor Swift &amp; Zayn Malik - I Don&#x27;t Wanna Live Forever (Toob&#x27;s Moombahbaas Refix) (buy = free DL!)" target="_blank" style="color: #cccccc; text-decoration: none;">Taylor Swift &amp; Zayn Malik - I Don&#x27;t Wanna Live Forever (Toob&#x27;s Moombahbaas Refix) (buy = free DL!)</a></div>
+-->
+
 
             <button type="button" onclick="myCalendar()">
                 <i class="fa-solid fa-calendar fa-4x btn"></i>
             </button>
 
             <div id="calendar">
-                <!--
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showTitle=1&showTz=1&src=MnVtcGUzbzExanRuMnVrZ2YzM2cwZGV2ZThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=OHRjbTNzY2J1YW5hYmo5NjZzczRuMWlhZW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=c29vbmJ0cWtmbnFldjRtNjFudW1kY2llZzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23E4C441&color=%23616161&color=%23F09300" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
--->
 
-
-                <!--
-                <div class="month">
-                  <ul>
-                    <li class="prev">&#10094;</li>
-                    <li class="next">&#10095;</li>
-                    <li>August<br><span style="font-size:18px">2021</span></li>
-                  </ul>
-                </div>
-
-                <ul class="weekdays">
-                  <li>Mo</li>
-                  <li>Tu</li>
-                  <li>We</li>
-                  <li>Th</li>
-                  <li>Fr</li>
-                  <li>Sa</li>
-                  <li>Su</li>
-                </ul>
-
-                <ul class="days">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                  <li>6</li>
-                  <li>7</li>
-                  <li>8</li>
-                  <li>9</li>
-                  <li><span class="active">10</span></li>
-                  <li>11</li>
-                  ...etc
-                </ul>
--->
             </div>
         </div>
 
@@ -129,6 +106,7 @@
                 <i class="fa-solid fa-note-sticky fa-4x btn"></i>
             </button>
 
+
             <div id="stickNotes">
                 <div class="notes" id="app">
                     <div class="notes__sidebar">
@@ -147,6 +125,8 @@
                     </div>
                 </div>
             </div>
+
+
             <button type="button" onclick="myCheckList()">
                 <i class="fa-solid fa-list-check fa-4x btn"></i>
             </button>
@@ -177,6 +157,4 @@
             </div>
         </div>
     </div> <!-- end "form-container" div -->
-</body>
-
-</html>
+</body></html>

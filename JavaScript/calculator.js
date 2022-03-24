@@ -12,6 +12,8 @@ function xcal() {
     x.style.display === "none";
 }
 
+// <cite><a href="https://github.com/WebDevSimplified/Vanilla-JavaScript-Calculator"></a></cite>
+
 class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement
