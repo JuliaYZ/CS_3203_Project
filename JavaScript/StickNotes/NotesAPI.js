@@ -1,3 +1,5 @@
+// <cite><a href="https://github.com/dcode-youtube/notes-app-javascript-localstorage"></a></cite>
+
 export default class NotesAPI {
     static getAllNotes() {
         const notes = JSON.parse(localStorage.getItem("notesapp-notes") || "[]");

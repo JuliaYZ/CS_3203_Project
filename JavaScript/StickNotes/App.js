@@ -1,3 +1,5 @@
+// <cite><a href="https://github.com/dcode-youtube/notes-app-javascript-localstorage"></a></cite>
+
 import NotesView from "./NotesView.js";
 import NotesAPI from "./NotesAPI.js";
 
