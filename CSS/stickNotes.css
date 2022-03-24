@@ -1,12 +1,5 @@
 /*<cite><a href="https://github.com/dcode-youtube/notes-app-javascript-localstorage"></a></cite>*/
 
-#stickNotes {
-    display: none;
-    position: absolute;
-    top: 100px;
-    transform: translateX(-200%);
-}
-
 .notes {
     display: flex;
     height: 100%;
@@ -22,6 +15,7 @@
     overflow-y: auto;
     padding: 1em;
     width: 300px;
+    background-color: azure;
 }
 
 .notes__add {
