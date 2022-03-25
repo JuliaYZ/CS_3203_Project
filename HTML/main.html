@@ -183,9 +183,42 @@
                 <img src="../imags/blackboard1.jpg" alt="blackboard">
             </div>
 
+
             <div id="text">
-                <h3>Study Time: </h3>
-                <h3>Remaining Time: </h3>
+
+                <button type="button" id="SS" onclick="start()">
+                    Start Study!
+                </button>
+
+                <div id="ss1">
+                    <label>Set Your Goal: </label><br>
+                    <input type="text" id="setGoal" autofocus><br>
+                    <label class="lable">Set Your Study Time: </label><br>
+                    <input type="number" min="0" max="60">hour(s)
+                    <input type="number" min="0" max="60">minute(s)
+                    <input type="number" min="0" max="60">second(s)<br>
+                    <input type="submit">
+                    <input type="reset">
+
+                </div>
+
+
+<!--
+                <div id="ss2">
+                    <lable>Goal: </lable>
+                    <label>Studied Time: </label>
+                    <label>Remaining Time: </label>
+                    <button type="button">Stop</button>
+                </div>
+-->
+
+<!--
+                <div id="ss3">
+                    <lable>Congratulations!</lable>
+                    <button type="button">OK</button>
+                    <button type="button">Set Your Next Goal</button>
+                </div>
+-->
             </div>
         </div>
     </div> <!-- end "form-container" div -->
