@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="../CSS/calendar.css">
     <script src="../JavaScript/calendar.js" defer></script>
 
+    <link rel="stylesheet" href="../CSS/music.css">
+    <script src="../JavaScript/music.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <cite><a href="https://github.com/bradtraversy/vanillawebprojects/tree/master/music-player"></a></cite>
+
     <link rel="stylesheet" href="../CSS/calculator.css">
     <script src="../JavaScript/calculator.js" defer></script>
     <cite><a href="https://github.com/WebDevSimplified/Vanilla-JavaScript-Calculator"></a></cite>
@@ -50,15 +55,57 @@
                 <p>Soon...</p>
             </div>
 
-            <button type="button">
+            <button type="button" onclick="myMusic()">
                 <i class="fa-solid fa-music fa-4x btn"></i>
             </button>
 
-            <!--
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/299183494&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/dondersteen-606958087" title="dondersteen" target="_blank" style="color: #cccccc; text-decoration: none;">dondersteen</a> · <a href="https://soundcloud.com/dondersteen-606958087/zayn-malik-taylor-swift-i-dont-wanna-live-forever" title="Taylor Swift &amp; Zayn Malik - I Don&#x27;t Wanna Live Forever (Toob&#x27;s Moombahbaas Refix) (buy = free DL!)" target="_blank" style="color: #cccccc; text-decoration: none;">Taylor Swift &amp; Zayn Malik - I Don&#x27;t Wanna Live Forever (Toob&#x27;s Moombahbaas Refix) (buy = free DL!)</a></div>
--->
+            <div id="music">
+                <i class="fa-solid fa-xmark fa-2x" id="xMus" onclick="xMus()"></i>
 
+                <ul id="playlist">
+                    <li><a href="../Musics/alone.mp3">Alone</a></li>
+                    <li><a href="../Musics/around_the_corner.mp3">Around The Corner</a></li>
+                    <li><a href="../Musics/blind_girl.mp3">Blind Girl</a></li>
+                    <li><a href="../Musics/change_your_mind.mp3">Change Your Mind</a></li>
+                    <li><a href="../Musics/i_love_you.mp3">I Love You</a></li>
+                    <li><a href="../Musics/love_of_my_life.mp3">Love Of My Life</a></li>
+                    <li><a href="../Musics/maze_of_sorrow.mp3">Maze Of Sorrow</a></li>
+                    <li><a href="../Musics/sensitive.mp3">Sensitive</a></li>
+                    <li><a href="../Musics/tantalizing_youth.mp3">Tantalizing Youth</a></li>
+                    <li><a href="../Musics/the_deep.mp3">The Deep</a></li>
+                    <li><a href="../Musics/time_bomb.mp3">Time Bomb</a></li>
+                    <li><a href="../Musics/to_aurora.mp3">To Aurora</a></li>
+                </ul>
+
+                <div class="music-container" id="music-container">
+                    <div class="music-info">
+                        <h4 id="title"></h4>
+                        <div class="progress-container" id="progress-container">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                    </div>
+
+                    <audio src="../Musics/alone.mp3" id="audio"></audio>
+
+
+                    <div class="img-container">
+                        <img src="../Musics/music_imgs/alone.jfif" alt="music-cover" id="cover" />
+                    </div>
+
+                    <div class="navigation">
+                        <button id="prev" class="action-btn">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button id="play" class="action-btn action-btn-big">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="next" class="action-btn">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
 
             <button type="button" onclick="myCalendar()">
                 <i class="fa-solid fa-calendar fa-4x btn"></i>
@@ -105,12 +152,11 @@
             <button type="button" onclick="myStickNotes()">
                 <i class="fa-solid fa-note-sticky fa-4x btn"></i>
             </button>
-            
+
             <script>
-                function myStickNotes(){
+                function myStickNotes() {
                     window.open("../HTML/stickNotes.html", "_blank");
                 }
-            
             </script>
 
             <button type="button" onclick="myCheckList()">

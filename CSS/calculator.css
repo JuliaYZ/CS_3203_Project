@@ -23,7 +23,7 @@ calculator::after {
     cursor: pointer;
 }
 
-.xcal:hover {
+#xcal:hover {
     box-shadow: 3px 3px 3px darkgray inset;
 }
 
