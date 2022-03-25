@@ -11,3 +11,10 @@ function xCS() {
     var x = document.getElementById("CS");
     x.style.display === "none";
 }
+
+function start(){
+    var start = document.getElementById("SS");
+    var ss1 = document.getElementById("ss1");
+    start.style.display = "none";
+    ss1.style.display = "block";
+}

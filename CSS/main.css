@@ -21,8 +21,6 @@ body {
 
 #bb {
     width: 450px;
-    text-align: center;
-    justify-content: center;
     position: absolute;
     top: 250px;
     left: 30%;
@@ -39,16 +37,7 @@ body {
     width: 100%;
 }
 
-#text {
-    padding: 100px 0px;
-    margin-left: 70px;
-    display: block;
-    color: white;
-    font-family: arial, helvetica, sans-serif;
-    position: absolute;
-}
-
-h3 {
+.lable {
     margin-top: 20px;
 }
 
@@ -132,6 +121,32 @@ h3 {
     cursor: pointer;
 }
 
-.xCS:hover {
+#xCS:hover {
     box-shadow: 3px 3px 3px darkgray inset;
+}
+
+#text {
+    font-family: arial, helvetica, sans-serif;
+}
+
+#SS{
+    display: none;
+    float: left;
+    font-size: 20px;
+    padding: 15px;
+    margin:-210px 0 0 150px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#SS:hover {
+    box-shadow: 3px 3px 3px darkgray inset;
+}
+
+#ss1{
+    position: absolute;
+        padding: 100px 0;
+    margin-left: 20px;
+    display: block;
+    color: white;
 }
