@@ -21,6 +21,6 @@
     cursor: pointer;
 }
 
-.xcl:hover {
+#xcl:hover {
     box-shadow: 3px 3px 3px darkgray inset;
 }
