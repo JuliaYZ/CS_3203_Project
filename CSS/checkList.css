@@ -3,7 +3,7 @@
 #checkList {
     width: 380px;
     height: 600px;
-    display: block;
+    display: none;
     position: absolute;
     top: 50px;
     transform: translateX(-170%);
