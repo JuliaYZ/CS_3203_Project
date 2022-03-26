@@ -140,7 +140,8 @@ body {
 }
 
 #SS:hover {
-    box-shadow: 3px 3px 3px darkgray inset;
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
 }
 
 #ss1{

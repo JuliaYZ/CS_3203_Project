@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../CSS/main.css">
     <script src="../JavaScript/main.js" defer></script>
     <script src="https://kit.fontawesome.com/3daf42b482.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
 
     <link rel="stylesheet" href="../CSS/calendar.css">
     <script src="../JavaScript/calendar.js" defer></script>
@@ -27,6 +29,7 @@
 
     <link rel="stylesheet" href="../CSS/checkList.css">
     <script src="../JavaScript/checkList.js" defer></script>
+    <cite><a href="https://github.com/CodeExplainedRepo/To-Do-List"></a></cite>
 </head>
 
 <body>
@@ -164,16 +167,33 @@
             </button>
 
             <div id="checkList">
-                <i class="fa-solid fa-xmark fa-2x" id="xcl" onclick="xcl()"></i>
-                <div id="list">
-                    <input type="checkbox" id="cl1" name="cl1" value="cl1">
-                    <label for="cl1"> I have a bike</label><br>
-                    <input type="checkbox" id="cl2" name="cl2" value="cl2">
-                    <label for="cl2"> I have a car</label><br>
-                    <input type="checkbox" id="cl3" name="cl3" value="cl3">
-                    <label for="cl3"> I have a boat</label><br>
+                
+                <div class = "header">
+                    <i class="fa-solid fa-xmark fa-3x" id="xcl" onclick="xcl()"></i>
+                    <div class="clear">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </div>
+                    <div id="date"></div>
+                </div>
+                
+                <div class="content">
+                    <ul id="list">
+<!--
+                        <li class="item">
+                            <i class="fa fa-circle-thin co" job ="complete" id="0"></i>
+                        <p class="text">Drink Coffee</p>
+                        <i class="fa fa-trash-o de" job = "delete" id="0"></i>
+                        </li>
+-->
+                    </ul>
+                <div class="add-to-do">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <input type="text" id="input" placeholder="Add a To-Do HERE">
+                    </div>
                 </div>
             </div>
+            
+            
 
         </div>
 
@@ -203,7 +223,7 @@
                 </div>
 
 
-<!--
+                <!--
                 <div id="ss2">
                     <lable>Goal: </lable>
                     <label>Studied Time: </label>
@@ -212,7 +232,7 @@
                 </div>
 -->
 
-<!--
+                <!--
                 <div id="ss3">
                     <lable>Congratulations!</lable>
                     <button type="button">OK</button>
