@@ -90,7 +90,7 @@ h1 {
     justify-self: center;
 }
 
-.btn1:hover{
+.btn1:hover {
     cursor: pointer;
     text-shadow: 1px 3px 5px darkgray;
     box-shadow: 3px 3px 3px darkgray inset;

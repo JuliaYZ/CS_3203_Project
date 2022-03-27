@@ -1,7 +1,12 @@
 // <cite><a href="https://github.com/dcode-youtube/notes-app-javascript-localstorage"></a></cite>
 
 export default class NotesView {
-    constructor(root, { onNoteSelect, onNoteAdd, onNoteEdit, onNoteDelete } = {}) {
+    constructor(root, {
+        onNoteSelect,
+        onNoteAdd,
+        onNoteEdit,
+        onNoteDelete
+    } = {}) {
         this.root = root;
         this.onNoteSelect = onNoteSelect;
         this.onNoteAdd = onNoteAdd;
