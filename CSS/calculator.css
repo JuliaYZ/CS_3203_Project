@@ -16,18 +16,6 @@ calculator::after {
     font-weight: normal;
 }
 
-#xcal {
-    float: right;
-    margin-right: 10px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-#xcal:hover {
-    cursor: pointer;
-    text-shadow: 1px 3px 5px #000;
-}
-
 .calculator-grid {
     margin-top: 30px;
     display: grid;

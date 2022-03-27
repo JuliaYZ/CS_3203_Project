@@ -1,28 +1,15 @@
 /*<cite > <a href="https://github.com/portexe/VanillaCalendar" > </a > </cite >*/
 
 #container {
-/*    display: none;*/
+    display: none;
     width: 770px;
     background-color: #FFFCFF;
     padding: 20px;
     justify-content: center;
     position: absolute;
-    margin: -150px 0 0 -400px;
+    margin: -140px 0 0 -500px;
     transform: translateX(-25%);
     border-radius: 30px;
-}
-
-#xCD {
-    float: right;
-    margin-right: -930px;
-    margin-top: -100px;
-    cursor: pointer;
-
-}
-
-#xCD:hover {
-    cursor: pointer;
-    text-shadow: 1px 3px 5px #000;
 }
 
 .btn2 {

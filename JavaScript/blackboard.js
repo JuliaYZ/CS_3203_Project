@@ -26,20 +26,20 @@ function startBTN() {
 function showInput() {
     var display = document.getElementById("display");
     var userGoal = document.getElementById("userGoal");
-    
+
     ss1.style.display = "none";
     ss2.style.display = "block";
-    
+
     display.innerHTML = userGoal.value;
 }
 
-function finish(){
+function finish() {
     ss3.style.display = "none";
     SS.style.display = "block";
     stopInterval();
 }
 
-function nextGoal(){
+function nextGoal() {
     ss3.style.display = "none";
     textPos.style.display = "block";
     ss1.style.display = "block";
