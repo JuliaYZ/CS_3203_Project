@@ -19,7 +19,8 @@ class User(db.Model):
     password = db.Column(db.String(80))
     email = db.Column(db.String(120), unique=True)
     gender = db.Column(db.String(80))
-    birth = db.Column(db.String(80))
+    birth = db.Column(db.String(100))
+
 
 @app.before_first_request
 def create_db():
@@ -28,12 +29,6 @@ def create_db():
     
     admin = User(username='admin', password='root', email='admin@example.com')
     db.session.add(admin)
-
-    guestes = [User(username='guest1', password='guest1', email='guest1@example.com'),
-               User(username='guest2', password='guest2', email='guest2@example.com'),
-               User(username='guest3', password='guest3', email='guest3@example.com'),
-               User(username='guest4', password='guest4', email='guest4@example.com')]
-    db.session.add_all(guestes)
     db.session.commit()
 
 def valid_login(email, password):
@@ -50,17 +45,17 @@ def valid_regist(username, email):
     else:
         return True
 
-@app.route('/')
+@app.route('/main')
 def index():
-    msg = 'login successful'
-    return render_template('index.html', data = msg)
+   
+    return render_template('main.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
         if valid_login(request.form['email'], request.form['password']):
-            flash("Login successful!")
+            flash('Login successful!')
             return redirect(url_for('index'))
         else:
             error = 'Wrong username or password!'
@@ -76,7 +71,7 @@ def register():
             db.session.add(user)
             db.session.commit()
             
-            flash("register successfully!")
+            flash('register successfully!')
             return redirect(url_for('login'))
         else:
             error = 'The username or email address is already registered!'

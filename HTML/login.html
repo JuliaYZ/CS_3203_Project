@@ -2,11 +2,25 @@
 <html>
 
 <head>
-    <title>HTML Login Form</title>
+    
     <link rel="stylesheet" href="../CSS/login.css">
 </head>
 
 <body>
+  {% if error %}
+    <div class="error" > 
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Error! </strong>{{ error }}
+    </div>
+  {% endif %}
+   
+   {% for message in get_flashed_messages() %}
+    <div class="flash" > 
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Success! </strong>{{ message }}
+    </div>
+   
+   {% endfor %}
     <div class="container">
         <form method="post" action ='/login'> 
             <div class="input-field">
@@ -18,10 +32,8 @@
                 <label>Password</label>
             </div>
             <div class="button">
-                <button>
-                    
-                        Let's Go!
-                
+                <button>                  
+                        Let's Go!                   
                 </button>
                 <button>
                      <a href="{{url_for('register')}}" style="text-decoration:none;">
