@@ -3,7 +3,7 @@ from flask import Flask, redirect,render_template, request, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import and_, or_
 
-app = Flask(__name__,template_folder="../HTML", static_folder="../CSS")
+app = Flask(__name__,template_folder="../HTML",static_folder="../static")
 
 class Config:
     SQLALCHEMY_DATABASE_URI ='mysql://root:123456@127.0.0.1:3306/flaskdb'
@@ -45,6 +45,11 @@ def valid_regist(username, email):
         return False
     else:
         return True
+
+@app.route('/stickNotes')
+def stickNotes():
+     return render_template("stickNotes.html")
+
 
 @app.route('/main')
 def index():
