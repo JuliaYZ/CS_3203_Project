@@ -11,20 +11,28 @@ body {
 }
 
 .container {
-    width: 250px;
-    height: auto;
+    width: 450px;
+    height: 350px;
     padding: 20px 30px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 0 10px 0 #000;
     margin:auto;
     margin-top: 190px;
-    
 }
 
+
+.image img{
+    width: 25%;
+    border: 3px solid black;
+    transform: translateY(55px);
+    margin-left:10px
+}
 .input-field {
+    margin-left: auto;
     width: 250px;
     margin-bottom: 15px;
+    transform: translateY(-65px);
 }
 
 .input-field input {
@@ -71,33 +79,10 @@ input:valid ~ label{
 
 
 .button button {
-    display: list-item;
-    height: 30px;
+    
+    transform: translateY(-110px);
+    height: 32px;
+    width: auto;
     border-radius: 5px;
-    margin: auto;
-    margin-bottom: 10px;
     text-decoration: none;
-}
-
-.error{
-    padding:20px;
-    background-color: cornsilk
-}
-
-.close{
-    margin-left: 15px;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor:pointer;
-    transition: 0.3s;
-}
-.close:hover{
-    color:cornflowerblue;
-}
-
-.flash{
-    padding:20px;
-    background-color: lightgreen
 }

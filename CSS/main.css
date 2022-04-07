@@ -146,6 +146,30 @@ button {
     box-shadow: 3px 3px 3px darkgray inset;
 }
 
+
+.error{
+    padding:20px;
+    background-color: cornsilk
+}
+
+.close{
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+.close:hover{
+    color:cornflowerblue;
+}
+
+.flash{
+    padding:20px;
+    background-color: lightgreen
+}
+
 #textPos {
     width: 400px;
     position: absolute;
@@ -195,3 +219,4 @@ button {
     margin: 100px 20px 0 20px;
     padding: 8px;
 }
+

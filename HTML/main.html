@@ -37,9 +37,29 @@
 </head>
 
 <body>
+    {% if error %}
+    <div class="error" > 
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Error! </strong>{{ error }}
+    </div>
+   {% endif %}
+   
+   {% for message in get_flashed_messages() %}
+    <div class="flash" > 
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Success! </strong>{{ message }}
+    </div>
+   
+   {% endfor %}
+    <div class="form-container">
     <div class="lefttop">
         <div id="personal">
-            <button type="button">
+            <button type="button" onclick="myFunction()">
+               <script>
+                   function myFunction(){
+                       window.location.href = "../HTML/profile.html";
+                   }
+                </script>
                 <i class="fa-solid fa-address-card fa-6x btn"></i>
             </button>
         </div>
@@ -47,7 +67,7 @@
         <div id="points">
             <input type="button" class="btn" value="Points">
         </div>
-    </div> <!-- end "lefttop" div -->
+    </div> 
 
     <div id="list1">
 
