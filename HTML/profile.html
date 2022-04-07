@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HtML Register Form</title>
+    <link rel="stylesheet" href="../CSS/profile.css">
+</head>
+
+<body>
+    <div class="container">
+        <form method=POST action='/register'>
+           <div class = "image">
+               <img src ="../imags/personphto.jpg"> 
+           </div>
+            <div class="input-field">
+                <input type="text" name="username" placeholder="Please text your username" required>
+                <label>Username</label>
+            </div>
+            <div class="input-field">
+                <input type="email" name="email" placeholder="Please enter a valid email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password" placeholder="Please enter your password" required>
+                <label>Password</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="birthday" placeholder="mm/dd/yy" required>
+                <label>Birthday</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="gender" placeholder="Female|Male" required>
+                <label>Gender</label>
+            </div>
+            <div class="button">
+                <button>      	
+                    <strong> &#8678;</strong> back
+                </button>
+            </div>
+        </form>
+    </div>
+</body></html>

@@ -3,8 +3,6 @@
     padding: 0;
 }
 
-
-
 body {
     background-image: url(/imags/classroom1.jpg);
     background-repeat: no-repeat;
@@ -12,23 +10,21 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    box-shadow: 1 0 10px 0 #000;
+    box-shadow: 1 0 10px 0 #000;
 }
 
-.form-container {
-    width: auto;
-    height: 700px;
-    box-shadow: 1 0 10px 0 #000;
-    margin: auto;
+button {
+    border: none;
 }
 
 #bb {
     width: 450px;
-    text-align: center;
-    justify-content: center;
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 30%;
     transform: translateX(-50%);
+    z-index: -1;
 }
 
 #bb-img {
@@ -37,19 +33,10 @@ body {
 
 #bb-img img {
     background-size: 100%;
-    width: 100%;
+    width: 140%;
 }
 
-#text {
-    padding: 100px 0px;
-    margin-left: 70px;
-    display: block;
-    color: white;
-    font-family: arial, helvetica, sans-serif;
-    position: absolute;
-}
-
-h3 {
+.lable {
     margin-top: 20px;
 }
 
@@ -111,8 +98,54 @@ h3 {
 }
 
 .btn:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px darkgray;
     box-shadow: 3px 3px 3px darkgray inset;
 }
+
+#CS {
+    display: none;
+    position: absolute;
+    margin: 70px 0 0 -250px;
+    transform: translateX(-50%);
+    padding: 0 100px 100px 100px;
+    border-radius: 3em;
+    font-size: 50px;
+    justify-content: center;
+    align-content: center;
+    background-color: lightblue;
+}
+
+#xCS {
+    float: right;
+    margin: 70px 60px 20px 0;
+    cursor: pointer;
+}
+
+#xCS:hover {
+    box-shadow: 3px 3px 3px darkgray inset;
+}
+
+#text {
+    font-family: arial, helvetica, sans-serif;
+}
+
+#SS {
+    display: block;
+    float: left;
+    font-size: 20px;
+    padding: 15px;
+    margin: -280px 0 0 240px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#SS:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px darkgray;
+    box-shadow: 3px 3px 3px darkgray inset;
+}
+
 
 .error{
     padding:20px;
@@ -136,3 +169,54 @@ h3 {
     padding:20px;
     background-color: lightgreen
 }
+
+#textPos {
+    width: 400px;
+    position: absolute;
+    padding: 100px 0;
+    margin-left: 110px;
+    display: none;
+    color: white;
+}
+
+/*
+#ss1{
+    display: block;
+}
+
+#ss2{
+    display: none;
+}
+*/
+
+#timeLable {
+    margin-top: 20px;
+}
+
+#ss1 .btn {
+    margin: 30px 0 0 80px;
+    padding: 5px;
+}
+
+#ss2 button {
+    margin: 70px 0 0 180px;
+    padding: 5px;
+}
+
+#ss3 {
+    width: 400px;
+    position: absolute;
+    padding: 120px 0;
+    margin-left: 110px;
+    text-align: center;
+    justify-content: center;
+    display: none;
+    color: white;
+    font-size: 40px;
+}
+
+#ss3 button {
+    margin: 100px 20px 0 20px;
+    padding: 8px;
+}
+

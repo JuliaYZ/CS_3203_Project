@@ -22,9 +22,9 @@
    
    {% endfor %}
     <div class="container">
-        <form method="post" action ='/login'> 
+        <form method="post" action='/login'>
             <div class="input-field">
-                <input type="email"  name="email" placeholder="Please enter a valid email" required>
+                <input type="email" name="email" placeholder="Please enter a valid email" required>
                 <label>Email</label>
             </div>
             <div class="input-field">
@@ -33,16 +33,14 @@
             </div>
             <div class="button">
                 <button>                  
-                        Let's Go!                   
+                    Let's Go!
                 </button>
                 <button>
-                     <a href="{{url_for('register')}}" style="text-decoration:none;">
+                    <a href="{{url_for('register')}}" style="text-decoration:none;">
                         Don't have an account?
                     </a>
                 </button>
             </div>
         </form>
     </div>
-</body>
-
-</html>
+</body></html>
