@@ -116,16 +116,6 @@ button {
     background-color: lightblue;
 }
 
-#xCS {
-    float: right;
-    margin: 70px 60px 20px 0;
-    cursor: pointer;
-}
-
-#xCS:hover {
-    box-shadow: 3px 3px 3px darkgray inset;
-}
-
 #text {
     font-family: arial, helvetica, sans-serif;
 }

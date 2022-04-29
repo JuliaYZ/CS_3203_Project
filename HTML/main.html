@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>Home</title>
 
+    <link rel="stylesheet" href="../static/CSS/stickNotes.css">
+    <script src="../static/JavaScript/stickNotes.js" type = "text/JavaScript" defer></script>
+    <cite><a href="https://codepen.io/dcode-software/pen/ExXzdVM"></a></cite>
+
     <link rel="stylesheet" href="../static/CSS/main.css">
     <script src="../static/JavaScript/main.js" defer></script>
     <script src="https://kit.fontawesome.com/3daf42b482.js" crossorigin="anonymous"></script>
@@ -24,10 +28,6 @@
     <link rel="stylesheet" href="../static/CSS/calculator.css">
     <script src="../static/JavaScript/calculator.js" defer></script>
     <cite><a href="https://github.com/WebDevSimplified/Vanilla-JavaScript-Calculator"></a></cite>
-
-    <link rel="stylesheet" href="../static/CSS/stickNotes.css">
-    <script src="../static/JavaScript/StickNotes/stickNotes.js" type="module" defer></script>
-    <cite><a href="https://github.com/dcode-youtube/notes-app-javascript-localstorage"></a></cite>
 
     <link rel="stylesheet" href="../static/CSS/checkList.css">
     <script src="../static/JavaScript/checkList.js" defer></script>
@@ -58,38 +58,28 @@
                     <i class="fa-solid fa-address-card fa-6x btn"></i>
                 </button>
                 <div id="pro">
-                    <form method=POST action='/register'>
+                    <form method=POST>
                         <div class="image">
                             <img src="../static/imags/personphto.jpg">
                         </div>
-                        <div id="perInfo">
-                            <div class="input-field">
-                                <input type="text" name="username" placeholder="Please text your username" required>
-                                <label>Username</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="email" name="email" placeholder="Please enter a valid email" required>
-                                <label>Email</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="password" name="password" placeholder="Please enter your password" required>
-                                <label>Password</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" name="birthday" placeholder="mm/dd/yy" required>
-                                <label>Birthday</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" name="gender" placeholder="Female|Male" required>
-                                <label>Gender</label>
-                            </div>
-                        </div>
-                        <div id="backBtn">
-                            <button>
-                                <strong> &#8678;</strong> back
-                            </button>
-                        </div>
                     </form>
+                    <div id="perInfo">
+                        <div class="personField">
+                            <label>ID: {{ user_info.id }}</label>
+                        </div>
+                        <div class="personField">
+                            <label>Username: {{ user_info.username }}</label>
+                        </div>
+                        <div class="personField">
+                            <label>Email: {{ user_info.email }}</label>
+                        </div>
+                        <div class="personField">
+                            <label>Birthday: {{ user_info.birth }}</label>
+                        </div>
+                        <div class="personField">
+                            <label>Gender: {{ user_info.gender }}</label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -105,7 +95,6 @@
             </button>
 
             <div id="CS">
-                <i class="fa-solid fa-xmark" id="xCS" onclick="xCS()"></i>
                 <p>Coming</p>
                 <p>Soon...</p>
             </div>
@@ -115,8 +104,6 @@
             </button>
 
             <div id="music">
-                <i class="fa-solid fa-xmark fa-2x" id="xMus" onclick="xMus()"></i>
-
                 <ul id="playlist">
                     <li><a href="../static/Musics/alone.mp3">Alone</a></li>
                     <li><a href="../static/Musics/around_the_corner.mp3">Around The Corner</a></li>
@@ -217,7 +204,6 @@
             </button>
 
             <div id="calculator">
-                <i class="fa-solid fa-xmark fa-2x" id="xcal" onclick="xcal()"></i>
                 <div class="calculator-grid">
                     <div class="output">
                         <div data-previous-operand class="previous-operand"></div>
@@ -253,6 +239,8 @@
                     window.location.href = "{{url_for('stickNotes')}}";
                 }
             </script>
+
+            
 
             <button type="button" onclick="myCheckList()">
                 <i class="fa-solid fa-list-check fa-4x btn"></i>
@@ -344,4 +332,6 @@
 
             </div>
         </div> <!-- end "bb" div -->
-</body></html>
+</body>
+
+</html>
