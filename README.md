@@ -31,6 +31,39 @@ You may join any server for the virtual study rooms that you find online, but th
 pwd
 ```
 
+## Technology
+
+Graphics: Free Images with no copyright 
+
+Music: Free Music download from website with no copyright 
+
+Web server application development environment: Visual Studio Code & Brackets 
+
+Database development framework: Python with Flask & SQL 
+
+## Completed Tasks 
+
+* Functions 
+- Keep track of current task and study time 
+- Calendar 
+- Calculator 
+- Checklist 
+- Sticky Notes 
+- Music 
+* Register & Login (Show User Info) 
+* User Interface 
+
+## Future Tasks 
+* Functions 
+- Pet 
+- Friends 
+- Public Study Area 
+- Points 
+- Able to change background and profile picture 
+* Improve the Database 
+* Flexible screen size 
+* New Music Library
+
 ## Author(s)
 
 Yan Zhou (Yan.Zhou-2@ou.edu) - Back-End Developer; Project Manager
