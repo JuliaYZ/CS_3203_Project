@@ -3,7 +3,7 @@
 #calculator {
     display: none;
     position: absolute;
-    margin: -230px 0 0 -400px;
+    margin: -250px 0 0 -400px;
     transform: translateX(-50%);
     background-color: white;
 }
@@ -17,7 +17,7 @@ calculator::after {
 }
 
 .calculator-grid {
-    margin-top: 30px;
+    margin-top: 10px;
     display: grid;
     justify-content: center;
     align-content: center;

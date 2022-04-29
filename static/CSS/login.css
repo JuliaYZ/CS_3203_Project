@@ -7,7 +7,7 @@ body {
     max-height: 100vh;
     background-image: url(../imags/loginbg2.jpg);
     background-size: cover;
-    
+
 }
 
 .container {
@@ -17,9 +17,9 @@ body {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 0 10px 0 #000;
-    margin:auto;
+    margin: auto;
     margin-top: 190px;
-    
+
 }
 
 .input-field {
@@ -50,7 +50,7 @@ input:focus::placeholder {
 }
 
 input:focus ~ label,
-input:valid ~ label{
+input:valid ~ label {
     margin-left: 10px;
     transform: translateY(-55px);
     background: white;
@@ -79,25 +79,26 @@ input:valid ~ label{
     text-decoration: none;
 }
 
-.error{
-    padding:20px;
+.error {
+    padding: 20px;
     background-color: cornsilk
 }
 
-.close{
+.close {
     margin-left: 15px;
     font-weight: bold;
     float: right;
     font-size: 22px;
     line-height: 20px;
-    cursor:pointer;
+    cursor: pointer;
     transition: 0.3s;
 }
-.close:hover{
-    color:cornflowerblue;
+
+.close:hover {
+    color: cornflowerblue;
 }
 
-.flash{
-    padding:20px;
+.flash {
+    padding: 20px;
     background-color: lightgreen
 }
