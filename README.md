@@ -50,18 +50,24 @@ Functions
 - Checklist 
 - Sticky Notes 
 - Music 
+
 Register & Login (Show User Info) 
+
 User Interface 
 
 ## Future Tasks 
+
 Functions 
 - Pet 
 - Friends 
 - Public Study Area 
 - Points 
 - Able to change background and profile picture 
+
 Improve the Database 
+
 Flexible screen size 
+
 New Music Library
 
 ## Author(s)
