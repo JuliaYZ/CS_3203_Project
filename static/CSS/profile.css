@@ -20,54 +20,27 @@
 }
 
 #perInfo {
-    position: absolute;
+    position: relative;
     padding-top: 40px;
 }
 
-.input-field {
+.personField {
     width: 250px;
     margin-bottom: 15px;
     transform: translateX(300px);
+    padding: 20px;
 }
 
-.input-field input {
+.personField label {
     height: 25px;
     width: 250px;
     padding: 9px 0px;
-    border: 1px solid silver;
-    outline: none;
     font-size: 15px;
-}
-
-input::placeholder {
-    color: white;
-}
-
-input:focus {
-    border: 1px solid #1DA1F2;
-}
-
-input:focus::placeholder {
-    color: grey;
-    transition: .4s;
-}
-
-input:focus ~ label,
-input:valid ~ label {
-    margin-left: 10px;
-    transform: translateY(-55px);
-    background: white;
-    font-size: 12px;
-    color: #1DA1F2;
-}
-
-.input-field label {
     margin-left: 3px;
     position: absolute;
     transform: translateY(-34px);
     pointer-events: none;
-    color: grey;
-    font-size: 16px;
+    color: black;
     transition: .4s;
 }
 

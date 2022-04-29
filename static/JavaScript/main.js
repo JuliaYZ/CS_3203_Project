@@ -7,11 +7,6 @@ function comingSoon() {
     }
 }
 
-function xCS() {
-    var x = document.getElementById("CS");
-    x.style.display === "none";
-}
-
 function myProfile() {
     var x = document.getElementById("pro");
     if (x.style.display === "none") {

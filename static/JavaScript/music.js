@@ -9,11 +9,6 @@ function myMusic() {
     }
 }
 
-function xMus() {
-    var x = document.getElementById("music");
-    x.style.display === "none";
-}
-
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');

@@ -2,7 +2,7 @@
 from flask import Flask, redirect,render_template, request, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import and_, or_
-
+ 
 app = Flask(__name__,template_folder="../HTML",static_folder="../static")
 
 class Config:
@@ -15,7 +15,7 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column('user_id',db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True)
     password = db.Column(db.String(80))
     email = db.Column(db.String(120), unique=True)
@@ -50,23 +50,30 @@ def valid_regist(username, email):
 def stickNotes():
      return render_template("stickNotes.html")
 
-
 @app.route('/main')
 def index():
-   
-    return render_template('main.html')
+    print("hello")
+    print(Useremail)
+    user_info = User.query.filter(User.email == Useremail).first()
+    print(user_info)
+    
+    return render_template('main.html', user_info = user_info)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    global Useremail
+    user_info = User.query.all()
+    print(user_info)
     error = None
     if request.method == 'POST':
         if valid_login(request.form['email'], request.form['password']):
+            Useremail = request.form['email']
             flash('Login successful!')
             return redirect(url_for('index'))
         else:
             error = 'Wrong username or password!'
 
-    return render_template('login.html', error=error)
+    return render_template('login.html', error=error,user_info = user_info)
 
 @app.route('/register', methods=['GET','POST'])
 def register():
