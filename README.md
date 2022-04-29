@@ -14,22 +14,52 @@ You may join any server for the virtual study rooms that you find online, but th
 
 ### Prerequisites
 
+Development Environment: Visual Studio Code
+
+git clone https://github.com/JuliaYZ/CS_3203_Project.git
+
+OR download and extract CS_3203_Project-main.zip
+
+Before running the code, you have to make sure that you install MySQL Server and Python.
+
+You will need to add Python to your Environment Variables by the following steps:
+
+1. In the "System Properties," click "Environment Variables."
+
+2. Then, under "System variables," click "Path" and "Edit."
+
+3. Finally, click "New" and add Python to your Environment Variables.
+
+You will also need to be able to use flask and flask_sqlalchemy
+
+### How to Run
+
+run login.py, and then the code will run at http://127.0.0.1:3000/
 
 
+### How to use Virtual Study Room
 
+register new user by giving the information shown
 
-### How to Build
+login to the account using the email and password you registered
 
+* Top Left
 
+You will be able to view your registered information.
 
+* Top Right
 
+You can turn on the music and go to the next and previous music.
 
-### Executing program
+You can check the calendar, add and double click to delete an event to any date.
 
-* Show the directory of the file
-```
-pwd
-```
+* Right
+
+You can use the calculator.
+
+You can use the sticky notes by adding and double click to delete any notes.
+
+You can use the checklist by adding the task and hitting "Enter."
 
 ## Technology
 
