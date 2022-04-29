@@ -38,12 +38,21 @@ Yan Zhou (Yan.Zhou-2@ou.edu) - Back-End Developer; Project Manager
 Shiyuan Liu (shiyuan.liu-1@ou.edu) - Front-End Developer; Project Manager
 
 ## Reference(s)
+
 Sticky Notes: https://codepen.io/dcode-software/pen/ExXzdVM
+
 Fontawesome: https://kit.fontawesome.com/3daf42b482.js
+
 Fonts: https://fonts.googleapis.com/css?family=Titillium+Web
+
 Calendar: https://github.com/portexe/VanillaCalendar
+
 Fontawesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css
+
 Music: https://github.com/bradtraversy/vanillawebprojects/tree/master/music-player
+
 Calculator: https://github.com/WebDevSimplified/Vanilla-JavaScript-Calculator
+
 Checklist: https://github.com/CodeExplainedRepo/To-Do-List
+
 Countdown Timer: https://github.com/learn-webdevYT/countdown-timer
