@@ -43,26 +43,26 @@ Database development framework: Python with Flask & SQL
 
 ## Completed Tasks 
 
-* Functions 
+Functions 
 - Keep track of current task and study time 
 - Calendar 
 - Calculator 
 - Checklist 
 - Sticky Notes 
 - Music 
-* Register & Login (Show User Info) 
-* User Interface 
+Register & Login (Show User Info) 
+User Interface 
 
 ## Future Tasks 
-* Functions 
+Functions 
 - Pet 
 - Friends 
 - Public Study Area 
 - Points 
 - Able to change background and profile picture 
-* Improve the Database 
-* Flexible screen size 
-* New Music Library
+Improve the Database 
+Flexible screen size 
+New Music Library
 
 ## Author(s)
 
