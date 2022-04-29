@@ -2,27 +2,25 @@
 
 Virtual Study Room (VSR)
 
-## Project Vision
+# Project Vision
 
 FOR all students WHO want to have a quality study environment, THE VSR is a Web-based service THAT provides general study tools, such as music, notes taking, calendar, reminder, and other support features that improve the quality of the study. UNLIKE other virtual study rooms that emphasize human-to-human interaction, OUR product will provide customers with a more private environment, which allows them to focus on their learning activities. Our product also provides a variety of study tools to assist them in enhancing their learning efficiency and managing their learning tasks in a more organized way.”
 
-## Description
+# Description
 
 You may join any server for the virtual study rooms that you find online, but they require you to turn on the camera. There will be many people studying together on any server; the advantage is that everyone can motivate each other, but it will distract the study since everyone may discuss and chat throughout the study. And what we want to create is a study area that can belong to you. On our platform, you can play your favorite music, check your study list, schedule your study time and keep track of important information points. You don't need to visit dozens of websites to obtain these services, nor need to force human interaction; all of the learning tools you want can be acquired on our platform.
 
-## Getting Started
+# Getting Started
 
-### Prerequisites
+## Development Environment
 
-Development Environment: Visual Studio Code
+Visual Studio Code
 
-git clone https://github.com/JuliaYZ/CS_3203_Project.git
+## Prerequisites
 
-OR download and extract CS_3203_Project-main.zip
+* Before running the code, you have to make sure that you install MySQL Server and Python.
 
-Before running the code, you have to make sure that you install MySQL Server and Python.
-
-You will need to add Python to your Environment Variables by the following steps:
+* You will need to add Python to your Environment Variables by the following steps:
 
 1. In the "System Properties," click "Environment Variables."
 
@@ -30,38 +28,40 @@ You will need to add Python to your Environment Variables by the following steps
 
 3. Finally, click "New" and add Python to your Environment Variables.
 
-You will also need to be able to use flask and flask_sqlalchemy
+* You will also need to be able to use flask and flask_sqlalchemy
 
-### How to Run
+## How to Run
 
 run login.py, and then the code will run at http://127.0.0.1:3000/
 
 
-### How to use Virtual Study Room
+## How to use Virtual Study Room
 
-register new user by giving the information shown
+Here's the Demo video: https://youtu.be/mW0V53DmXnc
 
-login to the account using the email and password you registered
+* register new user by giving the information shown
 
-* Top Left
+* login to the account using the email and password you registered
 
-You will be able to view your registered information.
+### Top Left
 
-* Top Right
+* You will be able to view your registered information.
 
-You can turn on the music and go to the next and previous music.
+### Top Right
 
-You can check the calendar, add and double click to delete an event to any date.
+* You can turn on the music and go to the next and previous music.
 
-* Right
+* You can check the calendar, add and double click to delete an event to any date.
 
-You can use the calculator.
+### Right
 
-You can use the sticky notes by adding and double click to delete any notes.
+* You can use the calculator.
 
-You can use the checklist by adding the task and hitting "Enter."
+* You can use the sticky notes by adding and double click to delete any notes.
 
-## Technology
+* You can use the checklist by adding the task and hitting "Enter."
+
+# Technology
 
 Graphics: Free Images with no copyright 
 
@@ -71,7 +71,7 @@ Web server application development environment: Visual Studio Code & Brackets
 
 Database development framework: Python with Flask & SQL 
 
-## Completed Tasks 
+# Completed Tasks 
 
 Functions 
 - Keep track of current task and study time 
@@ -85,7 +85,7 @@ Register & Login (Show User Info)
 
 User Interface 
 
-## Future Tasks 
+# Future Tasks 
 
 Functions 
 - Pet 
@@ -100,13 +100,13 @@ Flexible screen size
 
 New Music Library
 
-## Author(s)
+# Author(s)
 
 Yan Zhou (Yan.Zhou-2@ou.edu) - Back-End Developer; Project Manager
 
 Shiyuan Liu (shiyuan.liu-1@ou.edu) - Front-End Developer; Project Manager
 
-## Reference(s)
+# Reference(s)
 
 Sticky Notes: https://codepen.io/dcode-software/pen/ExXzdVM
 
