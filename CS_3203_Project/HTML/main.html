@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../static/CSS/stickNotes.css">
+    <script src="../static/JavaScript/stickNotes.js" type = "text/JavaScript" defer></script>
+    <cite><a href="https://codepen.io/dcode-software/pen/ExXzdVM"></a></cite>
+
+    <link rel="stylesheet" href="../static/CSS/main.css">
+    <script src="../static/JavaScript/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/3daf42b482.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/CSS/profile.css">
+
+    <link rel="stylesheet" href="../static/CSS/calendar.css">
+    <script src="../static/JavaScript/calendar.js" defer></script>
+    <cite><a href="https://github.com/portexe/VanillaCalendar"></a></cite>
+
+    <link rel="stylesheet" href="../static/CSS/music.css">
+    <script src="../static/JavaScript/music.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <cite><a href="https://github.com/bradtraversy/vanillawebprojects/tree/master/music-player"></a></cite>
+
+    <link rel="stylesheet" href="../static/CSS/calculator.css">
+    <script src="../static/JavaScript/calculator.js" defer></script>
+    <cite><a href="https://github.com/WebDevSimplified/Vanilla-JavaScript-Calculator"></a></cite>
+
+    <link rel="stylesheet" href="../static/CSS/checkList.css">
+    <script src="../static/JavaScript/checkList.js" defer></script>
+    <cite><a href="https://github.com/CodeExplainedRepo/To-Do-List"></a></cite>
+
+    <link rel="stylesheet" href="../static/CSS/blackboard.css">
+    <script src="../static/JavaScript/blackboard.js" defer></script>
+    <cite><a href="https://github.com/learn-webdevYT/countdown-timer"></a></cite>
+</head>
+
+<body>
+    {% if error %}
+    <div class="error">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Error! </strong>{{ error }}
+    </div>
+    {% endif %}
+    {% for message in get_flashed_messages() %}
+    <div class="flash">
+        <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Success! </strong>{{ message }}
+    </div>
+    {% endfor %}
+    <div class="form-container">
+        <div class="lefttop">
+            <div id="personal">
+                <button type="button" onclick="myProfile()">
+                    <i class="fa-solid fa-address-card fa-6x btn"></i>
+                </button>
+                <div id="pro">
+                    <form method=POST>
+                        <div class="image">
+                            <img src="../static/imags/personphto.jpg">
+                        </div>
+                    </form>
+                    <div id="perInfo">
+                        <div class="personField">
+                            <label>ID: {{ user_info.id }}</label>
+                        </div>
+                        <div class="personField">
+                            <label>Username: {{ user_info.username }}</label>
+                        </div>
+                        <div class="personField">
+                            <label>Email: {{ user_info.email }}</label>
+                        </div>
+                        <div class="personField">
+                            <label>Birthday: {{ user_info.birth }}</label>
+                        </div>
+                        <div class="personField">
+                            <label>Gender: {{ user_info.gender }}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="points">
+                <input type="button" class="btn" value="Points">
+            </div>
+        </div>
+
+        <div id="list1">
+
+            <button type="button" onclick="comingSoon()">
+                <i class="fa-solid fa-paw fa-4x btn"></i>
+            </button>
+
+            <div id="CS">
+                <p>Coming</p>
+                <p>Soon...</p>
+            </div>
+
+            <button type="button" onclick="myMusic()">
+                <i class="fa-solid fa-music fa-4x btn"></i>
+            </button>
+
+            <div id="music">
+                <ul id="playlist">
+                    <li><a href="../static/Musics/alone.mp3">Alone</a></li>
+                    <li><a href="../static/Musics/around_the_corner.mp3">Around The Corner</a></li>
+                    <li><a href="../static/Musics/blind_girl.mp3">Blind Girl</a></li>
+                    <li><a href="../static/Musics/change_your_mind.mp3">Change Your Mind</a></li>
+                    <li><a href="../static/Musics/i_love_you.mp3">I Love You</a></li>
+                    <li><a href="../static/Musics/love_of_my_life.mp3">Love Of My Life</a></li>
+                    <li><a href="../static/Musics/maze_of_sorrow.mp3">Maze Of Sorrow</a></li>
+                    <li><a href="../static/Musics/sensitive.mp3">Sensitive</a></li>
+                    <li><a href="../static/Musics/tantalizing_youth.mp3">Tantalizing Youth</a></li>
+                    <li><a href="../static/Musics/the_deep.mp3">The Deep</a></li>
+                    <li><a href="../static/Musics/time_bomb.mp3">Time Bomb</a></li>
+                    <li><a href="../static/Musics/to_aurora.mp3">To Aurora</a></li>
+                </ul>
+
+                <div class="music-container" id="music-container">
+                    <div class="music-info">
+                        <h4 id="title"></h4>
+                        <div class="progress-container" id="progress-container">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                    </div>
+
+                    <audio src="../static/Musics/alone.mp3" id="audio"></audio>
+
+
+                    <div class="img-container">
+                        <img src="../static/Musics/music_imgs/alone.jfif" alt="music-cover" id="cover" />
+                    </div>
+
+                    <div class="navigation">
+                        <button id="prev" class="action-btn">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button id="play" class="action-btn action-btn-big">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="next" class="action-btn">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="button" onclick="myCalendar()">
+                <i class="fa-solid fa-calendar fa-4x btn"></i>
+            </button>
+
+            <div id="container">
+                <div id="header">
+                    <div id="monthDisplay"></div>
+                    <div>
+                        <button id="backButton" class="btn2">Back</button>
+                        <button id="nextButton" class="btn2">Next</button>
+                    </div>
+                </div>
+
+                <div id="weekdays">
+                    <div>Sunday</div>
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                </div>
+
+                <div id="calendar"></div>
+
+            </div>
+
+            <div id="newEventModal">
+                <h2>New Event</h2>
+
+                <input id="eventTitleInput" placeholder="Event Title" />
+
+                <button id="saveButton" class="btn2">Save</button>
+                <button id="cancelButton" class="btn2">Cancel</button>
+            </div>
+
+            <div id="deleteEventModal">
+                <h2>Event</h2>
+
+                <p id="eventText"></p>
+
+                <button id="deleteButton" class="btn2">Delete</button>
+                <button id="closeButton" class="btn2">Close</button>
+            </div>
+
+            <div id="modalBackDrop"></div>
+
+        </div> <!-- end "list1" div -->
+
+        <div id="list2">
+            <button type="button" onclick="myCalculator()">
+                <i class="fa-solid fa-calculator fa-4x btn"></i>
+            </button>
+
+            <div id="calculator">
+                <div class="calculator-grid">
+                    <div class="output">
+                        <div data-previous-operand class="previous-operand"></div>
+                        <div data-current-operand class="current-operand"></div>
+                    </div>
+                    <button data-all-clear class="span-two">AC</button>
+                    <button data-delete>DEL</button>
+                    <button data-operation>÷</button>
+                    <button data-number>1</button>
+                    <button data-number>2</button>
+                    <button data-number>3</button>
+                    <button data-operation>*</button>
+                    <button data-number>4</button>
+                    <button data-number>5</button>
+                    <button data-number>6</button>
+                    <button data-operation>+</button>
+                    <button data-number>7</button>
+                    <button data-number>8</button>
+                    <button data-number>9</button>
+                    <button data-operation>-</button>
+                    <button data-number>.</button>
+                    <button data-number>0</button>
+                    <button data-equals class="span-two">=</button>
+                </div>
+            </div>
+
+            <button type="button" onclick="myStickNotes()">
+                <i class="fa-solid fa-note-sticky fa-4x btn"></i>
+            </button>
+
+            <script>
+                function myStickNotes() {
+                    window.location.href = "{{url_for('stickNotes')}}";
+                }
+            </script>
+
+            
+
+            <button type="button" onclick="myCheckList()">
+                <i class="fa-solid fa-list-check fa-4x btn"></i>
+            </button>
+
+            <div id="checkList">
+
+                <div class="header">
+                    <i class="fa-solid fa-xmark fa-3x" id="xcl" onclick="xcl()"></i>
+                    <div class="clear">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </div>
+                    <div id="date"></div>
+                </div>
+
+                <div class="content">
+                    <ul id="list">
+                        <!--
+                        <li class="item">
+                            <i class="fa fa-circle-thin co" job ="complete" id="0"></i>
+                        <p class="text">Drink Coffee</p>
+                        <i class="fa fa-trash-o de" job = "delete" id="0"></i>
+                        </li>
+-->
+                    </ul>
+                    <div class="add-to-do">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        <input type="text" id="input" placeholder="Add a To-Do HERE">
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end "list2" div -->
+
+
+        <div id="bb">
+            <div id="bb-img">
+                <!--            <img src="C:\project 1\CS_3203_Project\imags\blackboard1.jpg" alt="blackboard">-->
+            </div>
+
+
+            <div id="text">
+
+                <button type="button" id="SS" onclick="startBTN()">
+                    <b>Start Study!</b>
+                </button>
+
+                <div id="textPos">
+                    <div id="ss1">
+                        <div id="setGoal">
+                            <label><b>Set Your Goal: </b></label><br>
+                            <input type="text" id="userGoal"><br>
+                        </div>
+
+                        <div id="timeLable">
+                            <label class="lable"><b>Set Your Study Time: </b></label><br>
+                        </div>
+                    </div>
+
+                    <div id="ss2">
+                        <div id="goal">
+                            <lable><b>Goal: </b></lable>
+                            <p><span id='display'></span></p><br>
+                        </div>
+                        <div id="remainingTime">
+                            <label><b>Remaining Time: </b></label><br>
+                        </div>
+                    </div>
+
+                    <div id="setTime">
+                        <div id="times">
+                            <p id="hour-label" class="labels">Hours</p>
+                            <p id="min-label" class="labels">Minutes</p>
+                            <p id="sec-label" class="labels">Seconds</p>
+                            <input id="hour" type="number" max="99" min="0" value="0" class="time">
+                            <p id="p1" class="semicolon">:</p><input id="minute" type="number" max="60" min="0" value="0" class="time">
+                            <p id="p2" class="semicolon">:</p><input id="sec" type="number" max="60" min="0" value="0" class="time">
+                            <button id="start" class="btn1" onclick="showInput()">Start</button>
+                            <button id="reset" class="btn1">Reset</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="ss3">
+                    <lable><b>Congratulations!</b></lable><br>
+                    <button type="button" onclick="finish()" class="btn"><b>OK</b></button>
+                    <button type="button" onclick="nextGoal()" class="btn"><b>Set Your Next Goal</b></button>
+                </div>
+
+            </div>
+        </div> <!-- end "bb" div -->
+</body>
+
+</html>
